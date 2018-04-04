@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/productClass.js"></script>
+  	<script src="js/buyerClass.js"></script>
+  	<script src="js/administratorClass.js"></script>  
+  	<script src="js/globalList.js"></script>
+  	<script src="js/general.js"></script>
+
+	<script src="js/functionsProfile.js"></script>		
+	<link rel="stylesheet" type="text/css" href="cs/style.css">		
+	<link rel="stylesheet" type="text/css" href="cs/profileStyle.css">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="css/plantilla.css" rel="stylesheet">	
+</head>		
+<body>
+		<header class="header">
+				<ul class="headerUL_left">
+						<li><a href="client_mainPage.html"><img class="headerLogo" src="img/logo.png" alt=""></a></li>
+				</ul>
+				<ul class="headerUL_rigth">
+						<li><a href="client_mainPage.html">Pagina Principal</a></li>
+						
+						<div class="dropdown">
+								<button class="dropbtn">Categorias</button>
+								<div class="dropdown-content">
+									<a href="client_all_products.html" onclick="setCategorieWoman()">Mujer</a>
+									<a href="client_all_products.html" onclick="setCategorieMan()">Hombre</a>
+									<a href="client_all_products.html" onclick="setCategorieBoy()">Niño</a>
+									<a href="client_all_products.html" onclick="setCategorieGirl()">Niña</a>
+								</div>
+							</div>
+
+						<li><a href="wishList.html">&#9734;</a></li>
+						<li><a href="carList.html"><img src="img/carrito.svg" alt="" style="width:2%;height: 2%;"></a></li>
+						<div class="dropdown">
+										<button class="dropbtn">&#9661;</button>
+										<div class="dropdown-content">
+												<a href="profile.html">Perfil</a>
+												<a href="history.html">Historial</a>
+												<a onclick="closeSession()" href="login.html">Cerrar Sesión</a>
+										</div>
+									</div>
+						<li class="header-divider-vertical" id="nombrePagina">Usuario</li>
+				</ul>
+</header>
+	
+	<div>		
+		<table>
+		  <thead>
+		    <tr>
+		      <th id="titule" colspan="3">user name</th>
+		    </tr>		    
+		  </thead>
+		  <tbody>		    
+		    <tr>
+		      <td>Password</td>
+		      <td id="passwordInfo">password</td>		      		    
+		      <td>
+		        <i onclick="changeViewPassword()" id="passwordInput" class="material-icons button edit">edit</i>		     
+		        <i onclick="changeInfoPassData()" style="visibility: hidden;"  id="passwordOk" class="material-icons button edit">OK</i>        
+		      </td>		      
+		    </tr>		    
+					
+	    	<tr id="1" style="display: none;">
+		      <td>Name</td>
+		      <td id="nameInfo">name</td>
+		      <td>
+		        <i onclick="changeViewName()" id="nameInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoNameData()" style="visibility: hidden;" id="nameOk" class="material-icons button edit">OK</i>		        
+		      </td>
+		    </tr>
+		    <tr id="2" style="display: none;">
+		      <td>Surnames</td>
+		      <td id="surmanesInfo">surnames</td>
+		      <td>
+		        <i onclick="changeViewSurnames()" id="surmanesInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoSurnamesData()" style="visibility: hidden;" id="surnamesOk" class="material-icons button edit">OK</i>		        
+		      </td>
+		    </tr>
+		    <tr id="3" style="display: none;">
+		      <td>Age</td>
+		      <td id="ageInfo">age</td>
+		      <td>
+		        <i onclick="changeViewAge()" id="ageInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoAgeData()" style="visibility: hidden;" id="ageOk" class="material-icons button edit">OK</i>	        
+		      </td>
+		    </tr>
+		    <tr id="4" style="display: none;">
+		      <td>E-mail</td>
+		      <td id="emailInfo">email</td>
+		      <td>
+		        <i onclick="changeViewEmail()" id="emailInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoEmailData()" style="visibility: hidden;" id="emailOk" class="material-icons button edit">OK</i>        
+		      </td>
+		    </tr>
+		    <tr id="5" style="display: none;">
+		      <td>Address</td>
+		      <td id="addressInfo">address</td>
+		      <td>
+		        <i onclick="changeViewAddress()" id="addressInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoAddressData()" style="visibility: hidden;" id="addressOk" class="material-icons button edit">OK</i>        
+		      </td>
+		    </tr>			   
+		    <tr id="6" style="display: none;">
+		      <td>Telephone</td>
+		      <td id="TelephoneInfo">tel</td>
+		      <td>
+		        <i onclick="changeViewTelephone()" id="TelephoneInput" class="material-icons button edit">edit</i>		        
+		        <i onclick="changeInfoTelephoneData()" style="visibility: hidden;" id="telephoneOk" class="material-icons button edit">OK</i>      
+		      </td>
+		    </tr>
+		    <tr id="7" style="display: none;">
+		      <td>BirthDate</td>
+		      <td id="birthayInfo">birthay</td>
+		      <td>
+		        <i onclick="changeViewBirthDate()" id="birthayInput" class="material-icons button edit">edit</i>	
+		        <i onclick="changeInfoBirthDateData()" style="visibility: hidden;" id="birthayOk" class="material-icons button edit">OK</i>       
+		      </td>
+		    </tr> 
+		    <tr id="8" style="display: none;">
+		      <td>Membership</td>			      
+		      <td>
+		        <i onclick="changeInfoMembership()" id= "membershipInput" class="material-icons button edit">Desactive</i>         
+		      </td>
+		      <td></td>
+		    </tr>		    		   
+		</tbody>
+		</table>
+
+		<table>
+		  <thead>
+		    <tr>
+		      <th colspan="3">Credit Cards</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+		    <tr>
+		      <th>ID: <input id="newCreditCard" type="text" name="newCreditCard"></th>
+		      <th>Money: <input id="newCreditCardMoney" type="text" name="newCreditCard"></th>
+		      <th colspan="2"><i onclick="createNewCard()" class="material-icons button edit">ADD NEW CARD</i></th>
+		    </tr>		  
+		  <tbody id="tableCard">
+		    
+		  </tbody>
+		</table>
+	</div>
+	<script src="js/functionsProfile.js"></script>
+	<script>
+    
+    $(document).ready(function(){
+      ponerNombre();
+  });
+    </script>	
+</body>
+</html>

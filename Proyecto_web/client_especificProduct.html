@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/productClass.js"></script>
+    <script src="js/buyerClass.js"></script>
+
+    <script src="globalList.js"></script>
+    <script src="js/general.js"></script>
+    <link href="css/carousel.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plantilla.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+
+    <title>Detalle Producto</title>
+    <style></style>
+</head>
+<body>
+    
+        <header class="header">
+                <ul class="headerUL_left">
+                    <li><a href="client_mainPage.html"><img class="headerLogo" src="img/logo.png" alt=""></a></li>
+                </ul>
+                <ul class="headerUL_rigth">
+                    <li><a href="client_mainPage.html">Pagina Principal</a></li>
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Categorias</button>
+                        <div class="dropdown-content">
+                          <a href="client_all_products.html" onclick="setCategorieWoman()">Mujer</a>
+                          <a href="client_all_products.html" onclick="setCategorieMan()">Hombre</a>
+                          <a href="client_all_products.html" onclick="setCategorieBoy()">Niño</a>
+                          <a href="client_all_products.html" onclick="setCategorieGirl()">Niña</a>
+                        </div>
+                      </div>
+    
+                    <li><a href="wishList.html">&#9734;</a></li>
+                    <li><a href="carList.html"><img src="img/carrito.svg" alt="" style="width:2%;height: 2%;"></a></li>
+                    <div class="dropdown">
+                            <button class="dropbtn">&#9661;</button>
+                            <div class="dropdown-content">
+                                <a href="profile.html">Perfil</a>
+                                <a href="history.html">Historial</a>
+                                <a onclick="closeSession()" href="login.html">Cerrar Sesión</a>
+                            </div>
+                          </div>
+                    <li class="header-divider-vertical" id="nombrePagina">Usuario</li>
+                </ul>
+        </header>
+        <div class="bodyBox marco position" id="marcoEspecificProduct">
+            
+                    <div class="containerCarousel">
+                <div id="myCarouselEspec" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators" id="olBoxEspec">                       
+                        <li data-target="#myCarouselEspec" data-slide-to="0" class="active" id="liItemClassEspec-0" ></li>
+                    </ol>
+                    <div class="carousel-inner" id="divBoxEspec">
+                        <div class="item active" id="divItemClassEspec-0">
+                            <img src="img/calidad.jpg" id="0" alt="111" style="width:100%;border:1px solid black;">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarouselEspec" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left">&#60;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarouselEspec" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right">&#62;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div> 
+
+            <div style="border:1px solid black; height:500px; padding:20px;">
+
+                <h2 id="nameProduct"></h2>
+                <p id="precio"></p>
+                <p id="descripcionProduct"></p>
+                <label for="amount">Cantidad Inventario:</label>
+                <input type="number" name="amount" placeholder="Digite la cantidad" id="amountProduct"/><br><br>
+                <button class="buttonStyle" id="buttonPurchase">Agregar a carrito de compras</button>
+
+                <button id="buttonWish">Agregar a lista de deseos</button>
+            </div>
+        </div>  
+
+  
+    
+    <script>
+        $(document).ready(function(){
+            ponerNombre();
+            cargarDatosAplication();
+            loadEspecificDataProduct();
+        })
+    
+    </script>
+</body>
+</html>

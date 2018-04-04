@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        
+        <script src="js/productClass.js"></script>
+        <script src="js/buyerClass.js"></script>
+        <script src="js/administratorClass.js"></script>
+        <script src="js/globalList.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/plantilla.css" rel="stylesheet">       
+        
+        <script src="js/general.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <ul class="headerUL_left">
+                <li><a href="admin_mainPage.html"><img class="headerLogo" src="img/logo.png" alt=""></a></li>
+            </ul>
+            <ul class="headerUL_rigth">
+                <li><a href="admin_mainPage.html">Pagina Principal</a></li>
+                <li><a href="admin_productControl.html">Administrar Productos</a></li>
+                <li><a href="request.html">Consultas</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">&#9661;</button>
+                    <div class="dropdown-content">
+                      <a onclick="closeSession()" href="login.html">Cerrar Sesión</a>
+                    </div>
+                  </div>
+                <li class="header-divider-vertical" id="nombrePagina">Usuario</li>
+            </ul>
+        </header>
+        <br><br>
+        <h1 style="text-align:center">Sistema de Compras</h1>
+        <br>
+        <img src="img/logo.jpg" alt="" id="imagenMainPageAdmin">
+
+
+        <script>
+        
+        $(document).ready(function(){
+                ponerNombre();
+            });
+        </script>
+    </body>
+</html>

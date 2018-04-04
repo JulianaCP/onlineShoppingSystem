@@ -1,0 +1,143 @@
+.bodyBox{
+    padding: 2%;
+}
+.imageBoxStyle img{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-radius: 25px;
+    border: 2px solid white;
+    box-shadow: 0px 2px 5px #666;
+}
+.imageBoxStyle img:hover{
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.imageBoxStyle h2{
+    padding: 15px;
+}
+.imagesBox{
+    height: 350px;
+    background-color: #424242;
+    box-shadow: 0px 2px 5px #666;
+    border-radius: 20px;
+
+}
+.ajustBox{
+    margin-top: 40px;
+}
+.classButton{
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    position: absolute;
+    font-size: 40px;
+    right: 40px;
+    margin:10px; 
+
+    cursor: pointer;
+    box-shadow: 0px 2px 5px #666;
+}
+.classButton:active{
+    background: white;
+    opacity: 0.5;
+  }
+.classButton:hover{
+background: white;
+
+}
+
+.insideBox{
+    background: white;
+    padding: 25px;
+    float: left;
+}
+.boxImage{
+    background-color: #F3F1F1;
+    padding: 10px 25px;
+}
+.boxImage img{
+    width: 200px;
+    height: 200px;
+}
+.boxImage:hover{
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.containerCarousel{
+    padding-top: 50px;
+    padding-right: 10px;
+    width: 30%;
+    height: 30%;
+    float:right;
+    border-style: none;
+ 
+}
+
+.position{
+    text-align: left;
+}
+
+
+#amountProduct {
+    height:20px; 
+    width:220px; 
+    padding:5px 8px;
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+.buttonStyle {
+    background-color: #68b12f;
+    border: 1px solid #509111;
+    color: white;
+    font-weight: bold;
+    padding: 6px 40px;
+    text-align: center;
+    border-radius: 28px;
+    font-size: large;
+    bottom: 0;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+}
+.buttonStyle:hover {
+    opacity:.85;
+    cursor: pointer; 
+}
+.buttonStyle:active {
+    border: 1px solid #20911e;
+    background-color: darkgreen;
+     
+}
+
+
+#buttonWish {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  #buttonWish:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }

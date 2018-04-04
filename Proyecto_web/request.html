@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/productClass.js"></script>
+	<script src="js/buyerClass.js"></script>
+	<script src="js/administratorClass.js"></script>
+	<script src="js/globalList.js"></script>
+	<script src="js/general.js"></script>		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="cs/style.css">
+	<link rel="stylesheet" type="text/css" href="cs/tableStyle.css">	
+		<link href="css/style.css" rel="stylesheet">
+
+    <link href="css/plantilla.css" rel="stylesheet">
+</head>
+<body>	
+        <header class="header">
+				<ul class="headerUL_left">
+					<li><a href="admin_mainPage.html"><img class="headerLogo" src="img/logo.png" alt=""></a></li>
+				</ul>
+				<ul class="headerUL_rigth">
+					<li><a href="admin_mainPage.html">Pagina Principal</a></li>
+					<li><a href="admin_productControl.html">Administrar Productos</a></li>
+					<li><a href="request.html">Consultas</a></li>
+					<div class="dropdown">
+						<button class="dropbtn">&#9661;</button>
+						<div class="dropdown-content">
+						  <a onclick="closeSession()" href="login.html">Cerrar Sesión</a>
+						</div>
+					  </div>
+					<li class="header-divider-vertical" id="nombrePagina">Usuario</li>
+				</ul>
+			</header>
+
+	<div class="divRequest">
+		<table class="table-fill">
+			<thead>
+				<tr>
+					<th class="text-left">Consulta</th>
+					<th class="text-left">Respuesta</th>
+				</tr>
+			</thead>
+		<tbody>
+			<tr>
+				<td class="text-left">Comprador con mayor cantidad de productos adquiridos</td>
+				<td id="moreProducts" class="text-left"></td>
+			</tr>
+			<tr>
+				<td class="text-left">Comprador con menor cantidad de productos adquiridos</td>
+				<td id="lessProducts" class="text-left"></td>
+			</tr>
+			<tr>
+				<td class="text-left">Comprador con mayor cantidad de dinero invertido en la aplicación</td>
+				<td id="moreMoney" class="text-left"></td>
+			</tr>
+			<tr>
+				<td class="text-left">Comprador con menor cantidad de dinero invertido en la aplicación</td>
+				<td id="lessMoney" class="text-left"></td>
+			</tr>		
+		</tbody>
+		</table>	
+	</div>	
+	<script src="js/functionsRequest.js"></script>	
+	<script>
+			
+			$(document).ready(function(){
+					ponerNombre();
+				});
+			</script>
+</body>
+</html>

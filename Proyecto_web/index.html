@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/productClass.js"></script>
+	<script src="js/buyerClass.js"></script>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var producto1 = new Product("id","producto","description",100,1,['img/1.jpg','img/2.png'],"categorie");
+		var producto2 = new Product("id2","producto2","description2",200,2,[],"categorie2");
+		document.write("<h1>"+producto1.getName()+"</h1>") 
+
+
+
+		var lista = [
+			{
+				producto: producto1,
+				cantidad: 5
+			}
+		];
+
+
+		lista.push({
+			producto: producto2,
+			cantidad: 52
+		});
+
+		
+
+
+		document.write("<br>");
+		document.write(lista[0].producto.getImgList());
+
+		
+		var buyer = new Buyer("kk","name","surnames",14,"email","address",
+		"telephone",[],"birthDate","userName","password", "membership",
+		400,[],[],[]);
+
+
+		var result = buyer.priceShoppingCart();
+		document.write("<h1>"+result+"</h1>") 
+
+
+
+
+
+		var cc = JSON.stringify(lista);
+		document.write("<h1>"+cc+"</h1>") 
+
+
+
+
+		[
+			{
+				"producto":{
+					"id":"id",
+					"name":"producto",
+					"description":"description",
+					"price":100,
+					"amount":1,
+					"imgList":["img/1.jpg","img/2.png"],
+					"categorie":"categorie"
+				},
+				"cantidad":5
+			},
+			{
+				"producto":{
+					"id":"id2",
+					"name":"producto2",
+					"description":"description2",
+					"price":200,
+					"amount":2,
+					"imgList":[],
+					"categorie":"categorie2"
+				},
+				"cantidad":52
+			}
+		]
+
+	</script>
+
+</body>
+</html>
+

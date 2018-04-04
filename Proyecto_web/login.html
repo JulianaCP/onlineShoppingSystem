@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<script src="js/productClass.js"></script>
+	<script src="js/buyerClass.js"></script>
+	<script src="js/administratorClass.js"></script>	
+	<script src="js/globalList.js"></script>
+	<script src="js/functionsLogin.js"></script>	
+	<link rel="stylesheet" type="text/css" href="cs/style.css">	
+	<style type="text/css">
+		h1{
+			text-align: center;
+		}
+		p{
+			font-family: arial;
+			font-size: 16px;
+			text-align: center;
+		}
+		body{
+			height: 100%;
+			width: 100%;
+  			background-repeat: no-repeat;  			
+		}
+	</style>
+</head>
+<body background="img/principal.jpg" class="bodyLogin">
+	<div class="container">
+        <div class="card card-container">                    	
+            <img id="profile-img" class="profile-img-card" src="img/logo.jpg"/>
+            <h1>Login</h1>
+            <p id="profile-name" class="profile-name-card"></p>
+            <div class="form-signin">                               
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>                               
+                <button onclick="findExistUser()" class="btn btn-lg btn-primary btn-block btn-signin" 
+                type="submit">Sign in</button>                                
+            </div>           			
+            <p id="error" style="visibility: hidden; color: red;">Usuario no se encuentra registrado</p>
+            <div id="membershipDiv" style="visibility: hidden;">
+				<p>¿Desea activar su membresía?</p>                               
+				<button onclick="NotMembreship()" style="margin-left: 45%; ">Si</button>       			
+			</div>
+        </div>
+    </div>
+</body>
+</html>

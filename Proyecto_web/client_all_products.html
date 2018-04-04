@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="globalList.js"></script>
+    <script src="js/productClass.js"></script>
+    <script src="js/buyerClass.js"></script>
+    <script src="js/general.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plantilla.css" rel="stylesheet">
+    <title>Catalogo Productos</title>
+</head>
+<body> 
+        <header class="header">
+                <ul class="headerUL_left">
+                    <li><a href="client_mainPage.html"><img class="headerLogo" src="img/logo.png" alt=""></a></li>
+                </ul>
+                <ul class="headerUL_rigth">
+                    <li><a href="client_mainPage.html">Pagina Principal</a></li>
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Categorias</button>
+                        <div class="dropdown-content">
+                          <a href="client_all_products.html" onclick="setCategorieWoman()">Mujer</a>
+                          <a href="client_all_products.html" onclick="setCategorieMan()">Hombre</a>
+                          <a href="client_all_products.html" onclick="setCategorieBoy()">Niño</a>
+                          <a href="client_all_products.html" onclick="setCategorieGirl()">Niña</a>
+                        </div>
+                      </div>
+    
+                    <li><a href="wishList.html">&#9734;</a></li>
+                    <li><a href="carList.html"><img src="img/carrito.svg" alt="" style="width:2%;height: 2%;"></a></li>
+                    <div class="dropdown">
+                            <button class="dropbtn">&#9661;</button>
+                            <div class="dropdown-content">
+                                <a href="profile.html">Perfil</a>
+                                <a href="history.html">Historial</a>
+                                <a onclick="closeSession()" href="login.html">Cerrar Sesión</a>
+                            </div>
+                          </div>
+                    <li class="header-divider-vertical" id="nombrePagina">Usuario</li>
+                </ul>
+        </header>
+        <div class="bodyBox marco" id="marcoAllProducts">
+            <h1>Productos</h1>
+
+        </div>
+    <script>
+        $(document).ready(function(){
+            ponerNombre();
+            cargarDatosAplication();
+            loadAllProducts();
+        })
+    </script>
+</body>
+</html>
+
+
+<!--
+
+
+            <div class="insideBox">
+                <div class="boxImage">
+                    <img src="img/calidad.jpg" alt="">
+                    <p>Name: blusa</p>
+                    <p>Price: 5000</p>
+                </div>
+            </div>    
+
+
+        -->
+

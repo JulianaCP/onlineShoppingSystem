@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+   margin-top: -10px;
+   background-color: #0B0B3B;
+   text-align: right;
+   left: 0; 
+   top: 0; 
+   position: relative;
+   width: 100%;
+}
+.headerUL_left{
+    float: left;
+    list-style: none;
+}
+
+.headerUL_rigth{
+    color: white;
+    padding-right: 2%;
+}
+.headerLogo{
+    width: 7%;
+    height: 8%;
+    left: 0; 
+    top: 0; 
+    position: fixed;
+}
+
+.headerUL_rigth li,headerUL_left li{
+    display: inline;
+}
+.headerUL_rigth li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 2%; 
+}
+
+.headerUL_rigth li a:hover {
+	text-decoration: none;
+    color: black;
+    background-color: white;
+    opacity: 0.5;
+    font-weight: bold;
+  }
+.header-divider-vertical {
+    height: 40px;
+    margin: 0 9px;
+    padding: 0% 1% 0% 1%;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFF;
+}
+.bodyBox{
+    margin: 2% 0% 0% 0%;
+    position: relative;
+
+}
+
+/****************************************************/
+/* client page style */
+
+
+.dropbtn {
+    background-color: #0B0B3B;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: black;
+    background-color: white;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+#imagenMainPageAdmin{
+    display: block;
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+}
